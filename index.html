@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Duelo de Feiticeiros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>⚔️ Duelo de Feiticeiros ⚡</h1>
+
+  <div class="game-container">
+
+    <!-- Mago do Jogador -->
+    <div class="wizard" id="player">
+      <img src="mago1.jpg" alt="Mago Jogador" class="wizard-img">
+      <h2>Você</h2>
+      <p>Vida: <span id="player-health">100</span></p>
+      <div class="actions">
+        <button onclick="attack('fireball')">🔥 Bola de Fogo</button>
+        <button onclick="attack('ice')">❄️ Raio Congelante</button>
+        <button onclick="attack('meteor')">☄️ Chuva de Meteoros</button>
+        <button onclick="usePotion()">🧪 Usar Poção (<span id="potions">3</span>)</button>
+      </div>
+    </div>
+
+    <!-- Área de Batalha -->
+    <div class="battlefield" id="battlefield">
+      <!-- Animações aparecerão aqui -->
+    </div>
+
+    <!-- Mago Inimigo -->
+    <div class="wizard" id="enemy">
+      <img src="mago2.jpg" alt="Mago Inimigo" class="wizard-img">
+      <h2>Inimigo</h2>
+      <p>Vida: <span id="enemy-health">100</span></p>
+    </div>
+  </div>
+
+  <div id="log"></div>
+  
+  <button id="restart-btn" onclick="restartGame()">🔄 Recomeçar</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
